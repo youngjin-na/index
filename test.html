@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+<title>Good Design</title>
+<meta charset="utf-8">
+</head>
+
+<body>
+<h2>----------<3번째 강의(HTML과 JS의 만남:script 태그)>----------</h2>
+	<h1>JavaScript</h1>
+	<script>
+	document.write('hello world')
+	document.write(1+1)
+	</script>
+	<h1>html</h1>
+	1+1
+
+<br><br><br>
+<h2>----------<4번째 강의(HTML과 JS의 만남:이벤트)>----------</h2>
+<br><br>
+
+	<input type="button" value="hi" onclick="alert('hi')">
+	<br>
+	<input type="button" value="hello there?" onclick="alert('well.. you are there?')">
+	<br>
+	<input type="text" onchange="alert('wooah.. hey hey, what are you doing?')">
+	<br>
+	<input type="text" onkeydown="alert('ohoho... plz dont!')">
+	<br>
+	<input type="text" onkeydown="alert('ohoho... plz dont!'')">
+		<br>[위의 경우 '를 한번 더 썼기 때문에, alert가 실행되지 않는다.]
+	<br><br>
+자바스크립트에는 기념적인 10~20개의 이벤트(클릭했을 때, 텍스트박스 같은 것.)가 있다.
+
+<br><br><br>
+<h2>----------<5번째 강의(HTML과 JS의 만남:콘솔)>----------</h2>
+<br><br>
+
+alert('A design is a plan or specification for the construction of an object or system or for the implementation of an activity or process, or the result of that plan or specification in the form of a prototype, product or process. The verb to design expresses the process of developing a design. In some cases, the direct construction of an object without an explicit prior plan (such as in craftwork, some engineering, coding, and graphic design) may also be considered to be a design activity. The design usually has to satisfy certain goals and constraints, may take into account aesthetic, functional, economic, or socio-political considerations, and is expected to interact with a certain environment. Major examples of designs include architectural blueprints, engineering drawings, business processes, circuit diagrams, and sewing patterns.'length)
+<br>
+콘솔을 통해 알아보니, 840자라는 것을 확인했다.
+<br><br>
+*[자동 줄바꿈 기능을 Soft Wrap이라고 하는데, 상단 메뉴bar에서 'File' > 'Settings' > 'Soft Wrap'을 체크하면 자동 줄바꿈이 켜진다.]
+<br>
+*[콘솔창에서 ↑화살표키를 누르면 그 전에 적었던 명령어들이 다시 커서에 나타난다. 그리고 계속 누르면 그 전전전전까지도 가져올 수 있다.]
+
+<br><br><br>
+<h2>----------<6번째 강의(데이터 타입-문자열과 숫자)>----------</h2>
+<br><br>
+
+<h3>JavaScript Data type</h3>
+<br>
+-Boolean  -Null  -Underfined  -Number  -String  -Symbol(ECMAScript 6에 추가됨)  -Object
+<br><br>
+
+<h3>콘솔창과 이항 연산자</h3>
+<br><br> 그 중, 산술 연산자.
+<br> '+(더하기)'와 '-(빼기)'와 '*(곱하기)'와 '/(나누기)'.
+<br><br>
+
+<h3>문자열은 따옴표로.</h3>
+<br>작은 따옴표는 작은 따옴표로 끝내고, 큰 따옴표는 큰 따옴표로 끝낸다
+.
+<br><br>
+*[.toUpperCase]의 경우 [.toUppercase]와 같이 한 문자만 소문자로 잘못 적어도,
+작동되지 않더라]
+*[이상하게도, 'hello world'.toUpperCase라고 치면 ƒ toUpperCase() { [native code] }라고 나오고. "hello world".toUpperCase('hello world')라고 쳐야 "HELLO WORLD"가 나온다.]
+<br>*[이유를 찾았다.'()'가 있고 없고의 차이였다..]
+
+<br><br>*[찾고자하는 문자가 몇번째인지 알려주는 indexOf의 경우, 해당하는 문자가 없을 경우 '-1'이라는 값을 추출하며, 찾는 문자가
+만약에 맨 첫번째에 있다면 0으로 출력한다. 시작은 항상 0에서부터 올라간다는 것.]
+
+<br><br>공백을 없애주는 ''.trim'.
+
+<br><br>*[문자열끼리를 +라는 이항 연산자로 더하면, 이어주는 역할을 한다. 가령 '1'+'524'를 콘솔창에 계산시키면, '525'가 나오는 게 아니라 1과 524를 문자열로 해석하여 둘을 붙인 '1524'가 나오게 되는 것이다. 재밌는 점은, 다른 산술 연산자(-,*,/)의 경우는 숫자를 문자열로 취급해도 계산해서 값이 나온다는 것이다. 예를 들면, '2'*'8'은 '16'이라는 값이 나오는 것이다.]
+*[숫자가 아닌 문자를 문자열로 취급한다는 뜻인 따옴표로 감싸지 않으면, 콘솔창은 인식하지 않고 정의하지 못한다고 말한다.]
+
+<br><br><br>
+<h2>----------<7번째 강의(변수와 대입 연산자)>----------</h2>
+<br><br>
+
+<h3>대입 연산자의 사소하지만 아주 작은 '특징'</h3>
+*[생활코딩님은 몰라도 된다고 말씀하셨지만, x = 1라는 부분에서 'x'를 '변수'라고 하며, '='를 '대입연산자'라고 한다.]
+*[대입연산자의 특징은, 좌항과 우항을 결합해서 '우항'의 값을 만들어낸다고 한다. 이게 좌항 우항 차이가 없지 않는가로 생각할 수가 있는데, 뭐가 다른지 몇번 찾아보니 알겠다.]
+ <br>
+*[콘솔 창에 이렇게 변수값을 넣는다. 'x=1;' > 'y=2;' > 'x+y;'   그러면 결과값은 '3'이 출력된다.]
+<br>
+*[이번엔 이렇게 해보자. 'x=1;' > 'y=2;' > 'x=y;' > 'x+y;'   그러면 놀랍게도 값은 '4'가 출력된다.]
+<br>
+*[여기서 드는 의문점. '아니, x값은 1이고, y값은 2일텐데, x,y가 같게 만들었으니, 결과값이 4라는 것은 x,y 둘다 2라는 소리다. 왜 값이
+'2'로 같아진 것일까. 왜 '1'이 아닌 '2'로 말이다.]
+<br>
+*[대입연산자의 특징이 여기서 드러난 것이다. '우항의 값을 만들어 내는 것'. 'x=y;'라는 명령어를 통해 x값이 1이라할지라도 y라는 '우항'의 값이 '2'이기 때문에, x 변수값을 '2'라는 결과값으로 만들어낸 것이다.]
+<br>
+*[이게 무슨 차이가 있냐하면, 'x=y;' 와 'y=x'는 얼핏 같은 식으로 보일 수도 있지만, 사실은 그렇지 않다는 것이다.
+'x=1;' > 'y=2;' > 'y=x;' > 'x+y;'의 결과값은 앞과 다르게, '2'로 나올 것이기 때문이다.]
+<br><br>
+<h3>변수 var 조정</h3>
+*[콘솔창에서 실행을 유보하고 싶을 때는 Shift + Enter 키를 누르면 된다.]
+<br>
+var name = 'design';
+alert("A "+name+" is a plan or specification for the construction of an object or system or for the implementation of an activity or process, or the result of that plan or specification in the form of a prototype, product or process. The verb to "+name+" expresses the process of developing a "+name+". In some cases, the direct construction of an object without an explicit prior plan (such as in craftwork, some engineering, coding, and graphic "+name+") may also be considered to be a "+name+" activity. The "+name+" usually has to satisfy certain goals and constraints, may take into account aesthetic, functional, economic, or socio-political considerations, and is expected to interact with a certain environment. Major examples of "+name+"s include architectural blueprints, engineering drawings, business processes, circuit diagrams, and sewing patterns")
+<br>*[변수를 쓸 때는 variable이라는 약자인 var을 항상 쓰는 습관을 들이자.]
+
+<br><br><br>
+<h2>----------<8번째 강의(웹브라우저 제어)>----------</h2>
+<br><br>
+
+	<input type="button" value="on gray" onclick="alert('im blue')" style="background-color:gray;color:blue;">
+
+<br><br><br>
+<h2>----------<9번째 강의(CSS기초: style속성)>----------</h2>
+<br><br>
+
+<h3 style="color:powderblue"> Design World</h3>
+<h3 style="background-color:coral;color:skyblue"> Design World</h3>
+<h3 style="background-color:pink;color:blue"> Design World</h3>
+<h3 style="background-color:cyan;color:coral"> Design World</h3>
+<h3 style="background-color:MediumOrchid;color:Lavender"> Design World</h3>
+<br>*[검색창에 'css style color라고 치니까 뭐라고 치면 색을 바꿀 수 있는지 목록이 쫙 나온다.]
+
+<br><br><br>
+<h2>----------<10번째 강의(CSS기초: style태그)>----------</h2>
+<br><br>
+<h3><a href='https://en.wikipedia.org/wiki/Design' target="blank">Design</a></h3>
+<h4> what is Design?</h4>
+A <span style="font-weight:bold;">design</span> is a plan or specification for the construction of an object or system or for the implementation of an activity or process, or the result of that plan or specification in the form of a prototype, product or process. The verb to design expresses the process of developing a design. In some cases, the direct construction of an object without an explicit prior plan (such as in craftwork, some engineering, coding, and graphic design) may also be considered to be a design activity. The design usually has to satisfy certain goals and constraints, may take into account aesthetic, functional, economic, or socio-political considerations, and is expected to interact with a certain environment. Major examples of designs include architectural blueprints, engineering drawings, business processes, circuit diagrams, and sewing patterns.
+<br>*[사소하지만 replace all을 안 쓴 이유는, 해당 수업이 이러한 기능을 소개하기 위해서이기 때문에 에디터(편집자)의 기본 기능을 쓰지 않으신 것 같다.]
+<br><br>
+<h3>선택자</h3>
+<style>
+	.js{
+		font-weight: bold;
+		color:skyblue;
+	}
+	#first{
+		color:green;
+	}
+	span{
+		color:blue;
+	}
+	]
+</style>
+A <span class="js">design</span> is a plan or specification for the construction of an object or system or for the implementation of an activity or process, or the result of that plan or specification in the form of a prototype, product or process. The verb to <span class="js">design</span> expresses the process of developing a <span class="js">design</span>. In some cases, the direct construction of an object without an explicit prior plan (such as in craftwork, some engineering, coding, and graphic <span class="js">design</span>) may also be considered to be a <span class="js">design</span> activity. The <span class="js">design</span> usually has to satisfy certain goals and constraints, may take into account aesthetic, functional, economic, or socio-political considerations, and is expected to interact with a certain environment. Major examples of <span class="js">design</span>s include architectural blueprints, engineering drawings, business processes, circuit diagrams, and sewing patterns.
+<br>*[class는 style의 포함내에 앞에 '.'(점)을 붙인다.]
+
+<br><br><br>
+<h2>----------<11번째 강의(CSS기초: 선택자)>----------</h2>
+<br><br>
+
+[style의 속성은 10번째 강의에서 연장.]
+<br><br>
+A <span id="first" class="js">design</span> is a plan or <span>specification</span> for the construction of an object or system or for the implementation of an activity or process, or the result of that plan or specification in the form of a prototype, product or process. The verb to <span class="js">design</span> expresses the process of developing a <span class="js">design</span>. In some cases, the direct construction of an object without an explicit prior plan (such as in craftwork, some engineering, coding, and graphic <span class="js">design</span>) may also be considered to be a <span class="js">design</span> activity. The <span class="js">design</span> usually has to satisfy certain goals and constraints, may take into account aesthetic, functional, economic, or socio-political considerations, and is expected to interact with a certain environment. Major examples of <span class="js">design</span>s include architectural blueprints, engineering drawings, business processes, circuit diagrams, and sewing patterns.
+<br><br>*[id는 style의 포함내에 앞에 '#'(샵)을 붙인다.]
+<br>*[class는 포괄적이며 그룹핑하는 것이고, id는 정확한 타겟팅이며 식별하는 것이다.]
+<br>*[그래서, class 선택자를 이용해서 효과를 주고 싶은 태그들을 광범위하게 주고, id 선택자를 통해서 예외적으로 디자인을 바꿀 수 있게 활용할 수 있다.]
+<br><br>
+<h4>선택자의 우선 순위</h4>
+id 선택자 > class 선택자 > span 선택자
+
+<br><br><br>
+<h2>----------<WEB1 부록 -코드의 힘: 동영상 삽입>----------</h2>
+<br><br>
+<p>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/7T7r_oSp0SE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
+<br><br><br>
+<h2>----------<WEB1 부록 -코드의 힘: 댓글 기능 추가>----------</h2>
+<br><br>
+
+<p>
+	<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://product-design.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</p>
+
+<br><br><br>
+<h2>----------<WEB1 부록 -코드의 힘: 댓글 기능 추가>----------</h2>
+<br><br>
+
+<p>
+	<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5e4a2540a89cda5a18864ec9/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</p>
